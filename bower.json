@@ -1,0 +1,22 @@
+{
+  "name": "purescript-interpolate",
+  "homepage": "https://github.com/jordanmartinez/purescript-interpolate",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "output",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^4.1.1"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^4.0.0",
+    "purescript-spec": "^4.0.1",
+    "purescript-effect": "^2.0.1"
+  }
+}
