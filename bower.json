@@ -11,6 +11,10 @@
     "bower.json",
     "package.json"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jordanmartinez/purescript-interpolate.git"
+  },
   "dependencies": {
     "purescript-prelude": "^4.1.1"
   },
