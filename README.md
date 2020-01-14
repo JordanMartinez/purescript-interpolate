@@ -3,7 +3,7 @@
 [![Latest release](http://img.shields.io/github/release/jordanmartinez/purescript-interpolate.svg)](https://github.com/jordanmartinez/purescript-interpolate/releases)
 [![Build Status](https://travis-ci.org/jordanmartinez/purescript-interpolate.svg?branch=master)](https://travis-ci.org/jordanmartinez/purescript-interpolate)
 
-Enables string interpolation for PureScript by rendering values using their `Show` typeclass instance. Credit goes to @natefaubion for original implementation.
+Enables string interpolation for PureScript for values of 5 different types: `String`, `Boolean`, `Int`, `Number`, and `Char`. Credit goes to @natefaubion for original implementation. This project is a modified version of that implementation.
 
 ```purescript
 i "there are " 52 "apples." == "there are 52 apples"
