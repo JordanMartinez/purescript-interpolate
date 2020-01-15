@@ -15,8 +15,8 @@ main = runSuite [benchFoldl]
 
 benchFoldl :: Benchmark
 benchFoldl = mkBenchmark
-  { slug: "sum"
-  , title: "Comparing normal `a <> b` to `i a b`"
+  { slug: "accumulator-comparison-via-foldl"
+  , title: "`foldl acc "" array` where `acc` is `a <> b` or `i a b`"
   , sizes: (1..20)
   , sizeInterpretation: "Number of elements in the array"
   , inputsPerSize: 1
