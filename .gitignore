@@ -8,5 +8,6 @@
 /.purs*
 /.psa*
 /.spago/
+/tmp/
 packages.dhall
 spago.dhall
