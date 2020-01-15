@@ -19,8 +19,22 @@ value =
 
 ## Installation
 
+### Bower
+
 ```
-bower install purescript-interpolate
+bower install jordanmartinez/purescript-interpolate
+```
+
+### Spago
+
+```dhall
+-- Until this package is included in the latest package set,
+-- add the following in the `additions` part of your `packages.dhall` file.
+  interpolate =
+    { dependencies = [ "prelude" ]
+    , repo = "https://github.com/jordanmartinez/purescript-interpolate.git"
+    , version = "v2.0.1"
+    }
 ```
 
 ## Documentation
