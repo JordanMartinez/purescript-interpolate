@@ -6,7 +6,7 @@
 Enables string interpolation for PureScript for values of 5 different types: `String`, `Boolean`, `Int`, `Number`, and `Char`. Credit goes to @natefaubion for original implementation. This project is a modified version of that implementation.
 
 ```purescript
-i "there are " 52 "apples." == "there are 52 apples"
+i "there are " 52 " apples." == "there are 52 apples."
 i 52 " apples and " 0 " oranges." == "52 apples and 0 oranges."
 
 value :: String
