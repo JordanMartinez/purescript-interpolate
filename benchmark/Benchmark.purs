@@ -11,17 +11,49 @@ import Benchotron.Core (Benchmark, benchFn, mkBenchmark)
 import Benchotron.UI.Console (runSuite)
 
 main :: Effect Unit
-main = runSuite [benchFoldl]
+main = runSuite
+  [ benchFoldlBoth
+  , benchFoldlAppendOnly
+  , benchFoldlInterpOnly
+  ]
 
-benchFoldl :: Benchmark
-benchFoldl = mkBenchmark
-  { slug: "accumulator-comparison-via-foldl"
-  , title: """`foldl acc "" array` where `acc` is `a <> b` or `i a b`"""
-  , sizes: (1..20)
+benchFoldlBoth :: Benchmark
+benchFoldlBoth = mkBenchmark
+  { slug: "foldl-compare-append-and-i"
+  , title: """`foldl acc "" arrayOfInts` where `acc` is `show a <> show b` or `i`"""
+  , sizes: (1..25)
+      -- ^ anything higher than 30 elements produces OOM error
+      -- for 'show a <> show b'
+  , sizeInterpretation: "Number of elements in the array"
+  , inputsPerSize: 1
+  , gen: \n -> vectorOf n (arbitrary :: Gen Int)
+  , functions: [ benchFn "a <> b" (foldl (\a b -> show a <> show b) "")
+               , benchFn "i a b" (foldl i "")
+               ]
+  }
+
+benchFoldlAppendOnly :: Benchmark
+benchFoldlAppendOnly = mkBenchmark
+  { slug: "foldl-append-only"
+  , title: """`foldl (\a b -> show a <> show b) "" arrayOfInts`"""
+  , sizes: (1..25)
+      -- ^ anything higher than 30 elements produces OOM error
+      -- for 'show a <> show b'
   , sizeInterpretation: "Number of elements in the array"
   , inputsPerSize: 1
   , gen: \n -> vectorOf n (arbitrary :: Gen Int)
   , functions: [ benchFn "a <> b" (\array -> foldl (\a b -> show a <> show b) "" array)
-               , benchFn "i a b" (\array -> foldl i "" array)
+               ]
+  }
+
+benchFoldlInterpOnly :: Benchmark
+benchFoldlInterpOnly = mkBenchmark
+  { slug: "foldl-interp-only"
+  , title: """`foldl i "" arrayOfInts`"""
+  , sizes: (1..5) <#> (_ * 1000)
+  , sizeInterpretation: "Number of elements in the array"
+  , inputsPerSize: 1
+  , gen: \n -> vectorOf n (arbitrary :: Gen Int)
+  , functions: [ benchFn "i a b" (foldl i "")
                ]
   }

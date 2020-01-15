@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500"><defs><style type="text/css">
+.background {
+  fill: white;
+}
+
+text {
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.axis-path,
+.axis-line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+.data-series-0 {
+  stroke: steelblue;
+  fill: steelblue;
+}
+
+.data-series-1 {
+  stroke: crimson;
+  fill: crimson;
+}
+
+.data-series-2 {
+  stroke: mediumseagreen;
+  fill: mediumseagreen;
+}
+
+.data-series-3 {
+  stroke: mediumslateblue;
+  fill: mediumslateblue;
+}
+
+.data-series-4 {
+  stroke: goldenrod;
+  fill: goldenrod;
+}
+
+.error-bar {
+  fill: none;
+}
+</style></defs><rect width="960" height="500" class="background"/><g transform="translate(80,40)"><g transform="translate(420, 0)"><text style="text-anchor: middle; font-size: 28px;">`foldl i "" arrayOfInts`</text></g><g class="x axis" transform="translate(0,400)"><g class="tick" style="opacity: 1;" transform="translate(0,0)"><line y2="6" x2="0" class="axis-line"/><text dy=".71em" style="text-anchor: middle;" y="9" x="0">1,000</text></g><g class="tick" style="opacity: 1;" transform="translate(105,0)"><line y2="6" x2="0" class="axis-line"/><text dy=".71em" style="text-anchor: middle;" y="9" x="0">1,500</text></g><g class="tick" style="opacity: 1;" transform="translate(210,0)"><line y2="6" x2="0" class="axis-line"/><text dy=".71em" style="text-anchor: middle;" y="9" x="0">2,000</text></g><g class="tick" style="opacity: 1;" transform="translate(315,0)"><line y2="6" x2="0" class="axis-line"/><text dy=".71em" style="text-anchor: middle;" y="9" x="0">2,500</text></g><g class="tick" style="opacity: 1;" transform="translate(420,0)"><line y2="6" x2="0" class="axis-line"/><text dy=".71em" style="text-anchor: middle;" y="9" x="0">3,000</text></g><g class="tick" style="opacity: 1;" transform="translate(525,0)"><line y2="6" x2="0" class="axis-line"/><text dy=".71em" style="text-anchor: middle;" y="9" x="0">3,500</text></g><g class="tick" style="opacity: 1;" transform="translate(630,0)"><line y2="6" x2="0" class="axis-line"/><text dy=".71em" style="text-anchor: middle;" y="9" x="0">4,000</text></g><g class="tick" style="opacity: 1;" transform="translate(735,0)"><line y2="6" x2="0" class="axis-line"/><text dy=".71em" style="text-anchor: middle;" y="9" x="0">4,500</text></g><g class="tick" style="opacity: 1;" transform="translate(840,0)"><line y2="6" x2="0" class="axis-line"/><text dy=".71em" style="text-anchor: middle;" y="9" x="0">5,000</text></g><path class="axis-path" d="M0,6V0H840V6"/><text x="420" y="40" style="text-anchor: middle;">Number of elements in the array</text></g><g class="y axis"><g class="tick" style="opacity: 1;" transform="translate(0,381.27983603694935)"><line x2="-6" y2="0" class="axis-line"/><text dy=".32em" style="text-anchor: end;" x="-9" y="0">1.00e-4</text></g><g class="tick" style="opacity: 1;" transform="translate(0,334.26757901262647)"><line x2="-6" y2="0" class="axis-line"/><text dy=".32em" style="text-anchor: end;" x="-9" y="0">1.50e-4</text></g><g class="tick" style="opacity: 1;" transform="translate(0,287.2553219883036)"><line x2="-6" y2="0" class="axis-line"/><text dy=".32em" style="text-anchor: end;" x="-9" y="0">2.00e-4</text></g><g class="tick" style="opacity: 1;" transform="translate(0,240.24306496398066)"><line x2="-6" y2="0" class="axis-line"/><text dy=".32em" style="text-anchor: end;" x="-9" y="0">2.50e-4</text></g><g class="tick" style="opacity: 1;" transform="translate(0,193.23080793965786)"><line x2="-6" y2="0" class="axis-line"/><text dy=".32em" style="text-anchor: end;" x="-9" y="0">3.00e-4</text></g><g class="tick" style="opacity: 1;" transform="translate(0,146.21855091533496)"><line x2="-6" y2="0" class="axis-line"/><text dy=".32em" style="text-anchor: end;" x="-9" y="0">3.50e-4</text></g><g class="tick" style="opacity: 1;" transform="translate(0,99.20629389101205)"><line x2="-6" y2="0" class="axis-line"/><text dy=".32em" style="text-anchor: end;" x="-9" y="0">4.00e-4</text></g><g class="tick" style="opacity: 1;" transform="translate(0,52.19403686668915)"><line x2="-6" y2="0" class="axis-line"/><text dy=".32em" style="text-anchor: end;" x="-9" y="0">4.50e-4</text></g><g class="tick" style="opacity: 1;" transform="translate(0,5.181779842366252)"><line x2="-6" y2="0" class="axis-line"/><text dy=".32em" style="text-anchor: end;" x="-9" y="0">5.00e-4</text></g><path class="axis-path" d="M-6,0H0V400H-6"/><text transform="rotate(-90)" y="6" dy=".71em" style="text-anchor: end;">Mean running time (seconds)</text></g><g class="data-series-0"><circle cx="0" cy="400" r="3"/><circle cx="210" cy="320.22229459674463" r="3"/><circle cx="420" cy="217.61464172841661" r="3"/><circle cx="630" cy="114.88229403249193" r="3"/><circle cx="840" cy="0" r="3"/><path class="error-bar" x="0" y="400" d="M 0 400 V 383.2689984377895 h -3 h 6 h -3 V 416.7310015622105 h -3 h 6"/><path class="error-bar" x="210" y="320.22229459674463" d="M 210 320.22229459674463 V 315.4902374804088 h -3 h 6 h -3 V 324.95435171308054 h -3 h 6"/><path class="error-bar" x="420" y="217.61464172841661" d="M 420 217.61464172841661 V 210.46214001308718 h -3 h 6 h -3 V 224.76714344374608 h -3 h 6"/><path class="error-bar" x="630" y="114.88229403249193" d="M 630 114.88229403249193 V 104.57771620787915 h -3 h 6 h -3 V 125.18687185710485 h -3 h 6"/><path class="error-bar" x="840" y="0" d="M 840 0 V -14.789804686836217 h -3 h 6 h -3 V 14.789804686836217 h -3 h 6"/><path class="line" d="M0,400L210,320.22229459674463L420,217.61464172841661L630,114.88229403249193L840,0"/></g><g class="legend" transform="translate(50, 50)"><rect x="0" y="0" width="15" height="15" class="data-series-0"/><text x="24" y="13">i a b</text></g></g></svg>
