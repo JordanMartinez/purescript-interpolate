@@ -37,6 +37,18 @@ bower install jordanmartinez/purescript-interpolate
     }
 ```
 
+## Using this library as a dependency
+
+See [#1](https://github.com/JordanMartinez/purescript-interpolate/issues/1) for more context, but your `bower.json` file will need to look like this:
+
+```
+  "dependencies": {
+    "purescript-a": "^1.0.0",
+    "purescript-b": "^2.0.0",
+    "purescript-interpolate": "jordanmartinez/purescript-interpolate#^2.0.1"
+}
+```
+
 ## Documentation
 
 Module documentation is [published on Pursuit](http://pursuit.purescript.org/packages/purescript-interpolate).
