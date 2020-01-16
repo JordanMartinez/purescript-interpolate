@@ -20,14 +20,14 @@ main = runSuite
 benchFoldlBoth :: Benchmark
 benchFoldlBoth = mkBenchmark
   { slug: "foldl-compare-append-and-i"
-  , title: """`foldl acc "" arrayOfInts` where `acc` is `show a <> show b` or `i`"""
+  , title: """`foldl acc "" arrayOfInts` where `acc` is `a <> show b` or `i`"""
   , sizes: (1..25)
       -- ^ anything higher than 30 elements produces OOM error
       -- for 'show a <> show b'
   , sizeInterpretation: "Number of elements in the array"
   , inputsPerSize: 1
   , gen: \n -> vectorOf n (arbitrary :: Gen Int)
-  , functions: [ benchFn "a <> b" (foldl (\a b -> show a <> show b) "")
+  , functions: [ benchFn "a <> b" (foldl (\acc next -> acc <> show next) "")
                , benchFn "i a b" (foldl i "")
                ]
   }
@@ -42,7 +42,7 @@ benchFoldlAppendOnly = mkBenchmark
   , sizeInterpretation: "Number of elements in the array"
   , inputsPerSize: 1
   , gen: \n -> vectorOf n (arbitrary :: Gen Int)
-  , functions: [ benchFn "a <> b" (\array -> foldl (\a b -> show a <> show b) "" array)
+  , functions: [ benchFn "a <> b" (foldl (\acc next -> acc <> show next) "")
                ]
   }
 
