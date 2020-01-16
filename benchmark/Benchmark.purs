@@ -18,12 +18,12 @@ main = runSuite
 benchFoldlBoth :: Benchmark
 benchFoldlBoth = mkBenchmark
   { slug: "foldl-compare-append-and-i"
-  , title: """`foldl acc "" arrayOfInts` where `acc` is `a <> show b` or `i`"""
-  , sizes: (1..5) <#> (_ * 1000)
+  , title: """String Interpolation Comparison: `foldl f "" arrayOfInts`"""
+  , sizes: (1..10) <#> (_ * 1000)
   , sizeInterpretation: "Number of elements in the array"
   , inputsPerSize: 1
   , gen: \n -> vectorOf n (arbitrary :: Gen Int)
-  , functions: [ benchFn "a <> b" (foldl (\acc next -> acc <> show next) "")
-               , benchFn "i a b" (foldl i "")
+  , functions: [ benchFn "f = acc <> show next" (foldl (\acc next -> acc <> show next) "")
+               , benchFn "f = i acc next" (foldl i "")
                ]
   }
