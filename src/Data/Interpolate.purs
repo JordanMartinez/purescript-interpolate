@@ -88,7 +88,7 @@ else instance interpFailEverythingElse :: Fail (
        \a value of one of these types before it gets passed as an argument \
        \into the `i` function."
   ) => Interp anythingElse where
-  interp a = unsafeCrashWith "A compiler error will prevent this from running."
+  interp _ = unsafeCrashWith "A compiler error will prevent this from running."
 
 -- | Enables string interpolation using the following syntax:
 -- |
