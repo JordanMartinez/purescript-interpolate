@@ -16,12 +16,12 @@
     "url": "git://github.com/jordanmartinez/purescript-interpolate.git"
   },
   "dependencies": {
-    "purescript-prelude": "^4.1.1"
+    "purescript-prelude": "^5.0.1"
   },
   "devDependencies": {
-    "purescript-psci-support": "^4.0.0",
-    "purescript-spec": "^4.0.1",
-    "purescript-effect": "^2.0.1",
-    "purescript-benchotron": "v7.0.1"
+    "purescript-psci-support": "^5.0.0",
+    "purescript-spec": "^5.0.0",
+    "purescript-effect": "^3.0.0",
+    "purescript-benchotron": "master"
   }
 }
