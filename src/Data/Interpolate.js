@@ -1,5 +1,3 @@
-"use strict";
-
-exports.unsafeCrashWith = function(msg) {
+export const unsafeCrashWith = function(msg) {
   throw new Error(msg);
 }
