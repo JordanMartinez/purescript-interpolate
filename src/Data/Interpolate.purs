@@ -93,7 +93,7 @@ else instance interpFailEverythingElse :: Fail (
 -- | Enables string interpolation using the following syntax:
 -- |
 -- | ```
--- | i "there are " 52 "apples." == "there are 52 apples"
+-- | i "there are " 52 " apples." == "there are 52 apples"
 -- | i 52 " apples and " 0 " oranges." == "52 apples and 0 oranges."
 -- | i true 4 42.0 'c' "string" == "true442.0'c'string"
 -- | ```
