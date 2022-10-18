@@ -19,34 +19,8 @@ value =
 
 ## Installation
 
-### Bower
-
-```
-bower install jordanmartinez/purescript-interpolate
-```
-
-### Spago
-
-```dhall
--- Until this package is included in the latest package set,
--- add the following in the `additions` part of your `packages.dhall` file.
-  interpolate =
-    { dependencies = [ "prelude" ]
-    , repo = "https://github.com/jordanmartinez/purescript-interpolate.git"
-    , version = "v2.0.1"
-    }
-```
-
-## Using this library as a dependency
-
-See [#1](https://github.com/JordanMartinez/purescript-interpolate/issues/1) for more context, but your `bower.json` file will need to look like this:
-
-```
-  "dependencies": {
-    "purescript-a": "^1.0.0",
-    "purescript-b": "^2.0.0",
-    "purescript-interpolate": "jordanmartinez/purescript-interpolate#^2.0.1"
-}
+```sh
+spago install interpolate
 ```
 
 ## Documentation
