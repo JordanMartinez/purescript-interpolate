@@ -25,6 +25,7 @@ module Data.Interpolate (class Interp, interp, i) where
 
 import Data.Semigroup ((<>))
 import Data.Show (show)
+import Partial.Unsafe (unsafeCrashWith)
 import Prim.TypeError (class Fail, Text)
 
 -- | Enables string interpolation on values for only the following types:
@@ -99,5 +100,3 @@ else instance interpFailEverythingElse :: Fail (
 -- | ```
 i :: forall a. Interp a => a
 i = interp ""
-
-foreign import unsafeCrashWith :: forall a. String -> a

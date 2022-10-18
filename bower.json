@@ -16,7 +16,8 @@
     "url": "https://github.com/jordanmartinez/purescript-interpolate.git"
   },
   "dependencies": {
-    "purescript-prelude": "^6.0.0"
+    "purescript-prelude": "^6.0.0",
+    "purescript-partial": "^4.0.0"
   },
   "devDependencies": {
     "purescript-psci-support": "^6.0.0",
