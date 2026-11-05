@@ -1,10 +1,7 @@
 # Benchmarks
 
-Note: This code no longer works because adding `purescript-benchotron` to `bower.json`
-prevents me from publishing this package. If you want to run the benchmarks, you will need to
-
-1. Add `"purescript-benchotron": "master"` to the `bower.json`'s `devDependencies` field
-2. Run `bower i`
-3. Run `npm i benchmark.js`
-4. Run `pulp run -I 'benchmark' -m Benchmark`
-5. See the `benchmark-results` folder.
+This historical benchmark was already excluded from the library's working build
+because of its Benchotron dependency. It is not part of the Spago workspace, and
+the former Bower/Pulp instructions no longer apply. Restoring it requires a
+separate compatible benchmark setup. Historical results remain in
+`benchmark-results`.
