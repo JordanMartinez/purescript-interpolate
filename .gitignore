@@ -11,3 +11,4 @@
 /tmp/
 packages.dhall
 spago.dhall
+/spago.lock

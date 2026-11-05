@@ -1,4 +1,4 @@
-dist: xenial
+dist: jammy
 language: minimal
   # Use `nvm` to install latest version of NodeJS
 
@@ -14,18 +14,18 @@ branches:
   - master
 
 before_install:
-  - nvm install node
-  # ^ Install latest version of Node
+  - nvm install 22
+  # ^ Install a supported version of Node for Spago
   - npm i -g npm
   # ^ Update NPM
 
 install:
-  - npm i -g purescript@0.13.5 pulp bower
-  - bower i
+  - npm i -g purescript@0.15.4 spago@1.0.5
+  - spago install
 
 script:
-  - pulp test
+  - spago test
 
 cache:
   directories:
-    - bower_components
+    - .spago
